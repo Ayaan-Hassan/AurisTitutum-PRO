@@ -1,0 +1,79 @@
+import {
+    LayoutDashboard,
+    Activity,
+    BarChart3,
+    Settings2,
+    Zap,
+    Clock,
+    Trash2,
+    Plus,
+    Minus,
+    X,
+    User,
+    Info,
+    Brain,
+    Sparkles,
+    Filter,
+    Flame,
+    FileText,
+    Check,
+    CheckCircle,
+    CircleAlert,
+    BarChart2,
+    TrendingUp,
+    Moon,
+    Sun,
+    Download,
+    Palette,
+    Layout,
+    Database,
+    Code,
+    LogOut,
+    Lock,
+    Pencil
+} from 'lucide-react';
+
+const Icon = ({ name, size = 18, className = "" }) => {
+    const icons = {
+        'layout-dashboard': LayoutDashboard,
+        'activity': Activity,
+        'bar-chart-3': BarChart3,
+        'settings-2': Settings2,
+        'zap': Zap,
+        'clock': Clock,
+        'trash': Trash2,
+        'plus': Plus,
+        'minus': Minus,
+        'x': X,
+        'user': User,
+        'info': Info,
+        'brain': Brain,
+        'sparkles': Sparkles,
+        'filter': Filter,
+        'flame': Flame,
+        'file-text': FileText,
+        'check': Check,
+        'check-circle': CheckCircle,
+        'alert-circle': CircleAlert,
+        'bar-chart-2': BarChart2,
+        'trending-up': TrendingUp,
+        'moon': Moon,
+        'sun': Sun,
+        'download': Download,
+        'palette': Palette,
+        'layout': Layout,
+        'database': Database,
+        'code': Code,
+        'log-out': LogOut,
+        'lock': Lock,
+        'pencil': Pencil
+    };
+
+    const LucideIcon = icons[name];
+
+    if (!LucideIcon) return null;
+
+    return <LucideIcon size={size} className={className} />;
+};
+
+export default Icon;
