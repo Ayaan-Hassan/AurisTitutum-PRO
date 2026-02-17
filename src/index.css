@@ -347,17 +347,36 @@ button:hover:not(:disabled),
 
 .preloader-title {
   font-family: var(--font-sans), Inter, sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  font-size: 1.75rem;
   color: var(--text-primary);
   margin-top: 1.5rem;
-  text-shadow: 0 0 24px var(--accent-dim);
+  text-shadow: 0 0 32px var(--accent-dim), 0 2px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: text-fade-slide-up 1s ease-out 0.5s forwards;
+  font-feature-settings: "ss01", "ss02";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .preloader-title span {
   color: var(--accent);
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  animation: text-fade-slide-up 1s ease-out 0.7s forwards;
+}
+
+@keyframes text-fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .loading-text {

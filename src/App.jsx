@@ -119,7 +119,7 @@ function AppContent() {
     const amt = Math.max(1, Math.floor(Number(amount) || 1));
     const now = new Date();
     const todayKey = now.toISOString().split('T')[0];
-    const timestamp = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+    const timestamp = now.toLocaleTimeString([], { hour12: false });
 
     setHabits(prev => prev.map(h => {
       if (h.id !== id) return h;
