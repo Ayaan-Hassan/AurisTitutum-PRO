@@ -25,21 +25,21 @@
   --text-secondary: #a1a1aa;
   --accent: #E4E4E7;
   --accent-dim: rgba(228, 228, 231, 0.1);
-  --success: #10b981;
-  --danger: #ef4444;
+  --success: #275a49;
+  --danger: #723232;
 }
 
 :root[data-theme="light"] {
-  --bg-main: #f3f4f6;
-  --bg-sidebar: #f3f4f6;
+  --bg-main: #b4b3b3;
+  --bg-sidebar: #e5e6e7;
   --card-bg: #ffffff;
   --border-color: #e4e4e7;
   --text-primary: #111827;
   --text-secondary: #71717a;
   --accent: #18181b;
   --accent-dim: rgba(24, 24, 27, 0.06);
-  --success: #10b981;
-  --danger: #ef4444;
+  --success: #2a5e4c;
+  --danger: #492626;
 }
 
 @keyframes toast-slide-in {
@@ -365,7 +365,7 @@ button:hover:not(:disabled),
   font-weight: 800;
   letter-spacing: 0.1em;
   opacity: 0;
-  animation: text-fade-slide-up 1s ease-out 0.7s forwards;
+  animation: text-fade-slide-up 5s ease-out 2s forwards;
 }
 
 @keyframes text-fade-slide-up {
