@@ -30,8 +30,8 @@
 }
 
 :root[data-theme="light"] {
-  --bg-main: #b4b3b3;
-  --bg-sidebar: #e5e6e7;
+  --bg-main: #e4e4e4;
+  --bg-sidebar: #c3c3c4;
   --card-bg: #ffffff;
   --border-color: #e4e4e7;
   --text-primary: #111827;
