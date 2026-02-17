@@ -25,13 +25,13 @@
   --text-secondary: #a1a1aa;
   --accent: #E4E4E7;
   --accent-dim: rgba(228, 228, 231, 0.1);
-  --success: #275a49;
+  --success: #305f4f;
   --danger: #723232;
 }
 
 :root[data-theme="light"] {
-  --bg-main: #e4e4e4;
-  --bg-sidebar: #c3c3c4;
+  --bg-main: #eeeeee;
+  --bg-sidebar: #e4e4e4;
   --card-bg: #ffffff;
   --border-color: #e4e4e7;
   --text-primary: #111827;
@@ -365,7 +365,7 @@ button:hover:not(:disabled),
   font-weight: 800;
   letter-spacing: 0.1em;
   opacity: 0;
-  animation: text-fade-slide-up 5s ease-out 2s forwards;
+  animation: text-fade-slide-up 1s ease-out 0.7s forwards;
 }
 
 @keyframes text-fade-slide-up {
