@@ -54,12 +54,11 @@ const Layout = ({ children, userConfig, onAddHabit, habits = [] }) => {
                     <div className="flex items-center gap-4">
                         <button
                             onClick={() => setAurisOpen(true)}
-                            className="group relative flex items-center gap-2 py-2 px-5 rounded-xl border border-accent/20 bg-accent/5 text-text-primary font-bold text-[10px] uppercase tracking-wider transition-all hover:bg-accent/10 hover:border-accent/40 hover:scale-105 active:scale-95 h-10 overflow-hidden"
+                            className="group relative flex items-center gap-2.5 py-2.5 px-6 rounded-xl bg-gradient-to-br from-accent/10 via-accent/8 to-accent/5 border border-accent/30 text-text-primary font-bold text-[10px] uppercase tracking-wider transition-all duration-300 hover:from-accent/15 hover:via-accent/12 hover:to-accent/8 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5 active:translate-y-0 h-10 overflow-hidden backdrop-blur-sm"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/5 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full" />
-                            <Icon name="brain" size={14} className="text-accent relative z-10 animate-pulse" />
-                            <span className="relative z-10">Auris AI</span>
-                            <div className="absolute -inset-px rounded-xl border border-accent/20 group-hover:border-accent/50 transition-colors pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/10 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full" />
+                            <Icon name="brain" size={14} className="text-accent relative z-10 transition-transform duration-300 group-hover:scale-110" />
+                            <span className="relative z-10 transition-all duration-300 group-hover:tracking-[0.15em]">Auris AI</span>
                         </button>
                         <RealTimeClock />
                         <button
