@@ -17,7 +17,8 @@ const Dashboard = ({ habits, setHabits, logActivity, insights }) => {
         (day.entries || []).forEach(entry => {
           const isCount = typeof entry === 'string' && entry.includes('|');
           const [time, value, unit] = isCount ? entry.split('|') : [entry, null, null];
-          all.push({ habit: h.name, type: h.type, date: day.date, time, value, unit });
+          const formattedDate = new Date(day.date + 'T12:00:00').toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase();
+          all.push({ habit: h.name, type: h.type, date: day.date, formattedDate, time, value, unit });
         });
       });
     });
@@ -112,7 +113,7 @@ const Dashboard = ({ habits, setHabits, logActivity, insights }) => {
           </div>
           <div
             className="space-y-2 overflow-y-auto custom-scrollbar pr-2 flex-1 min-h-0"
-            style={{ height: habitListHeight }}
+            style={{ maxHeight: habitListHeight }}
           >
             {habits.map(h => (
               <div key={h.id} className="flex items-center justify-between p-3 bg-accent-dim border border-border-color rounded-xl group transition-all hover:border-text-secondary">
@@ -166,13 +167,13 @@ const Dashboard = ({ habits, setHabits, logActivity, insights }) => {
           </div>
           <div
             className="space-y-2 overflow-y-auto custom-scrollbar pr-2 flex-1 min-h-0"
-            style={{ height: habitListHeight }}
+            style={{ maxHeight: habitListHeight }}
           >
             {flattenedLogs.slice(0, 50).map((log, i) => (
               <div key={i} className="flex gap-3 items-start border-l-2 border-border-color pl-3 py-1.5 hover:border-text-secondary transition-colors">
                 <div className="flex-1 min-w-0">
                   <div className="text-[11px] font-bold text-text-primary truncate">{log.habit}</div>
-                  <div className="text-[9px] font-mono text-text-secondary">{log.time} · {log.date}{log.value != null ? ` · ${log.value} ${log.unit || ''}` : ''}</div>
+                  <div className="text-[9px] font-mono text-text-secondary">{log.time} · {log.formattedDate}{log.value != null ? ` · ${log.value} ${log.unit || ''}` : ''}</div>
                 </div>
               </div>
             ))}
@@ -205,7 +206,7 @@ const Dashboard = ({ habits, setHabits, logActivity, insights }) => {
               key={i}
               className={`aspect-square rounded-lg flex items-center justify-center text-[11px] font-mono ${dateStr
                 ? loggedDates.has(dateStr)
-                  ? 'bg-white text-bg-main border border-white shadow-sm'
+                  ? 'bg-white dark:text-bg-main text-black border border-white shadow-sm'
                   : 'bg-bg-main/50 border border-border-color text-text-secondary'
                 : 'invisible'}`}
             >

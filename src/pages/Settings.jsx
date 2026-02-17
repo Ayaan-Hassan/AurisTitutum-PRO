@@ -254,7 +254,12 @@ const Settings = ({ userConfig, setUserConfig, handleAvatarUpload, fileInputRef,
                                 <p className="text-xs text-text-secondary mt-0.5">Sign out of your account on this device.</p>
                             </div>
                         </div>
-                        <Button onClick={handleLogout} variant="danger" icon="log-out" className="bg-danger text-white hover:opacity-90 shrink-0">
+                        <Button 
+                            onClick={handleLogout} 
+                            variant="danger" 
+                            icon="log-out" 
+                            className="bg-red-600 hover:bg-red-700 text-white shadow-md hover:shadow-lg rounded-xl transition-all duration-200 shrink-0 px-6 py-2.5"
+                        >
                             Log out
                         </Button>
                     </div>

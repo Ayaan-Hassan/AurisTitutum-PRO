@@ -56,12 +56,8 @@ const Logs = ({ habits, setHabits }) => {
 
     const formatDate = (dateStr) => {
         try {
-            return new Date(dateStr + 'T12:00:00').toLocaleDateString('en-US', {
-                weekday: 'short',
-                month: 'short',
-                day: 'numeric',
-                year: 'numeric'
-            });
+            const date = new Date(dateStr + 'T12:00:00');
+            return date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase();
         } catch {
             return dateStr;
         }
